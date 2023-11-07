@@ -1,5 +1,5 @@
-let bouton = document.getElementsByClassName("btn btn-secondary");
+const themeButton = document.getElementById("theme");
 
-bouton.addEventListener('click', (event) => {
-    console.log("a");
-})
+themeButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");   
+});
