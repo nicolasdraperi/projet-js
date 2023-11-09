@@ -1,0 +1,152 @@
+body{
+    border:0;
+ 
+    background-image: url('https://www.ascii-info.com/img/slideshows/35.jpg');
+    background-size: c; background-repeat: no-repeat;
+}
+
+.tableau{
+    position: absolute;
+
+    top: 10%;
+    left: 35%;
+    width: 30%;
+    margin-top: 5%;
+
+    background-color: rgb(112, 162, 160);
+    border-radius: 10%;
+    text-align: center;
+    font-size: 250%;
+    opacity: 0.8    ;
+
+}
+
+
+
+.nom{
+    position: relative;
+    margin-top: 5%;
+
+    border: solid black 2px;
+    background: rgb(66, 66, 112);
+    border-radius:10px;
+    font-size: 80%;
+}
+.prénom{
+    margin-top: 5%;
+
+    position: relative;
+    top:2%;
+    border: solid black 2px;
+    background: rgb(66, 66, 112);
+    border-radius:10px;
+    font-size: 80%;
+}
+.email{
+    margin-top: 5%;
+
+    position: relative;
+    top:5%;
+    border: solid black 2px;
+    background: rgb(66, 66, 112);
+    border-radius:10px;
+    font-size: 80%;
+}
+
+.image{
+    position:relative;
+    top: 10%;
+    width: 20%;
+    border-radius: 20px;
+}
+
+.bouton{
+    position: relative;
+    top: 10%;
+    font-size: 80%;
+    background-color: antiquewhite;
+    border-radius:20px;
+}
+
+.bouton:hover{
+    background-color: aqua;
+    transition: all ease 2s;
+    rotate:360deg;
+}
+
+#recherche{
+    position: absolute;
+    right:5%;
+    top: 20%;
+    font-size: 150%;
+    border: solid 3px blue;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 20px;
+    text-align: center;
+}
+
+
+#resulat{
+
+   position: absolute;
+   background-color: antiquewhite;
+   text-align: center;
+   left: 80%;
+   top: 26%;
+   width: 15vw;
+   border-bottom-left-radius: 50px;
+   border-top-right-radius: 20px;
+    visibility: hidden;
+
+}
+
+.message{
+    margin-top: 5%;
+
+    position: relative;
+    top:8%;
+    border: solid black 2px;
+    background: rgb(66, 66, 112);
+    border-radius:10px;
+    font-size: 80%;
+}
+
+
+
+#maps{
+    position: absolute;
+    margin-top: 49%;
+    left: 0;
+   
+    width: 100%;
+    
+    background-color: black;
+}
+
+#maps>iframe{
+    width: 100%;
+    position: absolute;
+    top: 0;
+  height: 100vh;
+}
+
+
+/*style pour changer le theme*/
+.dark-mode {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: #333333;
+    color: #000000;
+}
+
+
+footer {
+    position: absolute;
+    top: 220%;
+    width: 100%;
+    height: auto; /* Ajustez la hauteur du footer selon vos besoins */
+}
