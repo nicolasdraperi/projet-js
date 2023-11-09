@@ -41,7 +41,7 @@ if (!$requete) {
     }
     $requete->closeCursor();
 }
-$_SESSION
+
 
 
 
