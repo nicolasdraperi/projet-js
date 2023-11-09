@@ -1,0 +1,34 @@
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+ }
+ .lignes{
+    text-align: center;
+ }
+ footer {
+    position:absolute;
+    bottom:0;  /* on le colle en bas */
+    width:100%;
+    height:100px;   /* Hauteur du pied de page */
+ }
+  /*style pour changer le theme*/
+  .dark-mode{
+    background-color: white;
+    color: #ffffff;
+  }
+  .dark-mode header, .dark-mode footer {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
