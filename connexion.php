@@ -1,5 +1,7 @@
 <?php
 
+
+ // connexion a la BDD
 $host = "localhost"; 
 $port = "3306";
 $dbname = "cybertech"; 
@@ -12,46 +14,35 @@ try {
     echo "Echec de la connexion : " . $except->getMessage();
 }
 
-$usrid = $_POST["id"];;
-$usrmdp=$_POST["password"];
+session_start();
+//récupératon des données entrés dans la page de login
+$user_id = $_POST["id"];;
+$user_password=$_POST["password"];
 
-
-$requete = $conn->prepare("SELECT * FROM `user` WHERE Username = :usrid");
-$requete->bindParam(':usrid', $usrid);
+$requete = $conn->prepare("SELECT * FROM `user` WHERE Username = :user_id");
+$requete->bindParam(':user_id', $user_id);
 $requete->execute();
 
 if (!$requete) {
     printf("Lecture impossible"); 
 } else {
-    $hash = password_hash($usrmdp, PASSWORD_DEFAULT);
+    $hash = password_hash($user_password, PASSWORD_DEFAULT);
     while ($row = $requete->fetch(PDO::FETCH_NUM)) {
-        if ($usrid == $row[1] and password_verify($usrmdp, $hash)){
+        if ($user_id == $row[1] and password_verify($user_password, $hash)){
+            $_SESSION[$user_id] = $row[1];
             header('Location: accueil.html');
             
         }
         else{
-            ?>
-                <script> alert('mot de passe incorrect !'); </script> 
-            <?php
+            header('Location: login.html');
         }
         
+
     }
     $requete->closeCursor();
 }
+$_SESSION
 
-/*
-if ($col = $requete->fetch(PDO::FETCH_ASSOC)) {
-    echo'usrn : '. $col['Username'] .' mdp : '. $col['Password'];
-    if (password_verify($usrmdp, $col['Password'])) {
-        echo "Connexion réussie. Bienvenue, " . $col['Username'];
 
-    } else {
-        echo "Mot de passe incorrect";
-    }
-} else {
-    echo "Identifiant incorrect";
-}
 
-$requete->closeCursor();
-*/
 ?>
