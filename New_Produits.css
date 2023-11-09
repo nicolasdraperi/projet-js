@@ -14,10 +14,10 @@ html, body {
  }
   /*style pour changer le theme*/
   .dark-mode{
-    background-color: white;
+    background-color: #333333;
     color: #ffffff;
   }
-  .dark-mode header, .dark-mode footer {
+  .dark-mode header {
     background-color: #333333;
     color: #ffffff;
   }

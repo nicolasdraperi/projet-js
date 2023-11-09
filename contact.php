@@ -10,7 +10,7 @@ $Message=$_POST['message'];
 $servername = 'localhost';
 $username = 'root';
 $password = '';
-$mydb='mail';
+$mydb='cybertech';
 //On établit la connexion
 $conn = new mysqli($servername, $username, $password,$mydb);
 
